@@ -1,0 +1,639 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BA36D6A017934C2900A6D168 /* barBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = BA36D69F17934C2900A6D168 /* barBackground.png */; };
+		BA63EDDD17933C3600FF0607 /* checkmark@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA63EDD517933C3600FF0607 /* checkmark@1x.png */; };
+		BA63EDDE17933C3600FF0607 /* checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA63EDD617933C3600FF0607 /* checkmark@2x.png */; };
+		BA63EDDF17933C3600FF0607 /* logo@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA63EDD717933C3600FF0607 /* logo@1x.png */; };
+		BA63EDE017933C3600FF0607 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA63EDD817933C3600FF0607 /* logo@2x.png */; };
+		BA63EDE117933C3600FF0607 /* news@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA63EDD917933C3600FF0607 /* news@1x.png */; };
+		BA63EDE217933C3600FF0607 /* news@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA63EDDA17933C3600FF0607 /* news@2x.png */; };
+		BA63EDE317933C3600FF0607 /* video@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA63EDDB17933C3600FF0607 /* video@1x.png */; };
+		BA63EDE417933C3600FF0607 /* video@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA63EDDC17933C3600FF0607 /* video@2x.png */; };
+		BA63EDE717933FED00FF0607 /* VideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA63EDE617933FED00FF0607 /* VideoCell.m */; };
+		BA73B31D1798F10100604C15 /* play@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA73B31B1798F10100604C15 /* play@1x.png */; };
+		BA73B31E1798F10100604C15 /* play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA73B31C1798F10100604C15 /* play@2x.png */; };
+		BA8C25EA178CE970004C45F3 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA8C25E9178CE970004C45F3 /* Parse.framework */; };
+		BA8C25EC178CEA33004C45F3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA8C25EB178CEA33004C45F3 /* AudioToolbox.framework */; };
+		BA8C25EE178CEA45004C45F3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA8C25ED178CEA45004C45F3 /* CFNetwork.framework */; };
+		BA8C25F0178CEC2F004C45F3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA8C25EF178CEC2F004C45F3 /* QuartzCore.framework */; };
+		BA8C25F2178CEC37004C45F3 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA8C25F1178CEC37004C45F3 /* MobileCoreServices.framework */; };
+		BA8C25F4178CEC3F004C45F3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA8C25F3178CEC3F004C45F3 /* Security.framework */; };
+		BA8C25F8178CEC4B004C45F3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA8C25F7178CEC4B004C45F3 /* SystemConfiguration.framework */; };
+		BA8C2600178D1A72004C45F3 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA8C25FF178D1A72004C45F3 /* PhotoViewController.m */; };
+		FE0DA9F217CE34C500384411 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0DA9F117CE34C500384411 /* News.m */; };
+		FE3BE79C1789E3E1003F96E3 /* GetVideosWebOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3BE79B1789E3E1003F96E3 /* GetVideosWebOperation.m */; };
+		FE6502BD1789F31E000E4505 /* VideoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6502BC1789F31E000E4505 /* VideoDetailViewController.m */; };
+		FE6502BF1789F38B000E4505 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6502BE1789F38B000E4505 /* MediaPlayer.framework */; };
+		FE6502C5178A1470000E4505 /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6502C4178A1470000E4505 /* Video.m */; };
+		FE859B2C178486EB005C81B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE859B2B178486EB005C81B1 /* Foundation.framework */; };
+		FE859B2E178486EB005C81B1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE859B2D178486EB005C81B1 /* CoreGraphics.framework */; };
+		FE859B30178486EB005C81B1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE859B2F178486EB005C81B1 /* UIKit.framework */; };
+		FE859B32178486EB005C81B1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE859B31178486EB005C81B1 /* CoreData.framework */; };
+		FE859B38178486EB005C81B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FE859B36178486EB005C81B1 /* InfoPlist.strings */; };
+		FE859B3A178486EB005C81B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE859B39178486EB005C81B1 /* main.m */; };
+		FE859B3E178486EB005C81B1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE859B3D178486EB005C81B1 /* AppDelegate.m */; };
+		FE859B41178486EB005C81B1 /* NASA_TV.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE859B3F178486EB005C81B1 /* NASA_TV.xcdatamodeld */; };
+		FE859B43178486EB005C81B1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE859B42178486EB005C81B1 /* Images.xcassets */; };
+		FE859B4A178486EC005C81B1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE859B49178486EC005C81B1 /* XCTest.framework */; };
+		FE859B4B178486EC005C81B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE859B2B178486EB005C81B1 /* Foundation.framework */; };
+		FE859B4C178486EC005C81B1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE859B2F178486EB005C81B1 /* UIKit.framework */; };
+		FE859B4D178486EC005C81B1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE859B31178486EB005C81B1 /* CoreData.framework */; };
+		FE859B55178486EC005C81B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FE859B53178486EC005C81B1 /* InfoPlist.strings */; };
+		FE859B57178486EC005C81B1 /* NASA_TVTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE859B56178486EC005C81B1 /* NASA_TVTests.m */; };
+		FE859B611784BFFE005C81B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE859B601784BFFE005C81B1 /* Main.storyboard */; };
+		FE859BA51784C29F005C81B1 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE859BA41784C29F005C81B1 /* NewsViewController.m */; };
+		FE859BA81784C2BE005C81B1 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE859BA71784C2BE005C81B1 /* VideoViewController.m */; };
+		FE859BB1178517ED005C81B1 /* NewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE859BB0178517ED005C81B1 /* NewsCell.m */; };
+		FEBC8B5217888F6300884EB3 /* GetNewsWebOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBC8B5117888F6300884EB3 /* GetNewsWebOperation.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FE859B4E178486EC005C81B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE859B20178486EB005C81B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE859B27178486EB005C81B1;
+			remoteInfo = "NASA TV";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BA36D69F17934C2900A6D168 /* barBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barBackground.png; sourceTree = "<group>"; };
+		BA63EDD517933C3600FF0607 /* checkmark@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkmark@1x.png"; sourceTree = "<group>"; };
+		BA63EDD617933C3600FF0607 /* checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkmark@2x.png"; sourceTree = "<group>"; };
+		BA63EDD717933C3600FF0607 /* logo@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@1x.png"; sourceTree = "<group>"; };
+		BA63EDD817933C3600FF0607 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
+		BA63EDD917933C3600FF0607 /* news@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "news@1x.png"; sourceTree = "<group>"; };
+		BA63EDDA17933C3600FF0607 /* news@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "news@2x.png"; sourceTree = "<group>"; };
+		BA63EDDB17933C3600FF0607 /* video@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video@1x.png"; sourceTree = "<group>"; };
+		BA63EDDC17933C3600FF0607 /* video@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video@2x.png"; sourceTree = "<group>"; };
+		BA63EDE517933FED00FF0607 /* VideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoCell.h; sourceTree = "<group>"; };
+		BA63EDE617933FED00FF0607 /* VideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoCell.m; sourceTree = "<group>"; };
+		BA73B31B1798F10100604C15 /* play@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@1x.png"; sourceTree = "<group>"; };
+		BA73B31C1798F10100604C15 /* play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@2x.png"; sourceTree = "<group>"; };
+		BA8C25E9178CE970004C45F3 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		BA8C25EB178CEA33004C45F3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		BA8C25ED178CEA45004C45F3 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		BA8C25EF178CEC2F004C45F3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		BA8C25F1178CEC37004C45F3 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		BA8C25F3178CEC3F004C45F3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		BA8C25F7178CEC4B004C45F3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		BA8C25FE178D1A72004C45F3 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		BA8C25FF178D1A72004C45F3 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
+		FE0DA9F017CE34C500384411 /* News.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = News.h; sourceTree = "<group>"; };
+		FE0DA9F117CE34C500384411 /* News.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = News.m; sourceTree = "<group>"; };
+		FE3BE79A1789E3E1003F96E3 /* GetVideosWebOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetVideosWebOperation.h; sourceTree = "<group>"; };
+		FE3BE79B1789E3E1003F96E3 /* GetVideosWebOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetVideosWebOperation.m; sourceTree = "<group>"; };
+		FE6502BB1789F31E000E4505 /* VideoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDetailViewController.h; sourceTree = "<group>"; };
+		FE6502BC1789F31E000E4505 /* VideoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDetailViewController.m; sourceTree = "<group>"; };
+		FE6502BE1789F38B000E4505 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		FE6502C3178A1470000E4505 /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
+		FE6502C4178A1470000E4505 /* Video.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Video.m; sourceTree = "<group>"; };
+		FE859B28178486EB005C81B1 /* NASA TV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NASA TV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE859B2B178486EB005C81B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FE859B2D178486EB005C81B1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FE859B2F178486EB005C81B1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FE859B31178486EB005C81B1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		FE859B35178486EB005C81B1 /* NASA TV-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NASA TV-Info.plist"; sourceTree = "<group>"; };
+		FE859B37178486EB005C81B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FE859B39178486EB005C81B1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FE859B3B178486EB005C81B1 /* NASA TV-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NASA TV-Prefix.pch"; sourceTree = "<group>"; };
+		FE859B3C178486EB005C81B1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FE859B3D178486EB005C81B1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FE859B40178486EB005C81B1 /* NASA_TV.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NASA_TV.xcdatamodel; sourceTree = "<group>"; };
+		FE859B42178486EB005C81B1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FE859B48178486EC005C81B1 /* NASA TVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NASA TVTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE859B49178486EC005C81B1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		FE859B52178486EC005C81B1 /* NASA TVTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NASA TVTests-Info.plist"; sourceTree = "<group>"; };
+		FE859B54178486EC005C81B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FE859B56178486EC005C81B1 /* NASA_TVTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NASA_TVTests.m; sourceTree = "<group>"; };
+		FE859B601784BFFE005C81B1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		FE859BA31784C29F005C81B1 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
+		FE859BA41784C29F005C81B1 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
+		FE859BA61784C2BE005C81B1 /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
+		FE859BA71784C2BE005C81B1 /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
+		FE859BAF178517ED005C81B1 /* NewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCell.h; sourceTree = "<group>"; };
+		FE859BB0178517ED005C81B1 /* NewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCell.m; sourceTree = "<group>"; };
+		FEBC8B5017888F6300884EB3 /* GetNewsWebOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetNewsWebOperation.h; sourceTree = "<group>"; };
+		FEBC8B5117888F6300884EB3 /* GetNewsWebOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetNewsWebOperation.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FE859B25178486EB005C81B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA8C25F8178CEC4B004C45F3 /* SystemConfiguration.framework in Frameworks */,
+				BA8C25F4178CEC3F004C45F3 /* Security.framework in Frameworks */,
+				BA8C25F2178CEC37004C45F3 /* MobileCoreServices.framework in Frameworks */,
+				BA8C25F0178CEC2F004C45F3 /* QuartzCore.framework in Frameworks */,
+				BA8C25EE178CEA45004C45F3 /* CFNetwork.framework in Frameworks */,
+				BA8C25EC178CEA33004C45F3 /* AudioToolbox.framework in Frameworks */,
+				FE6502BF1789F38B000E4505 /* MediaPlayer.framework in Frameworks */,
+				FE859B2E178486EB005C81B1 /* CoreGraphics.framework in Frameworks */,
+				FE859B32178486EB005C81B1 /* CoreData.framework in Frameworks */,
+				FE859B30178486EB005C81B1 /* UIKit.framework in Frameworks */,
+				BA8C25EA178CE970004C45F3 /* Parse.framework in Frameworks */,
+				FE859B2C178486EB005C81B1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE859B45178486EC005C81B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE859B4A178486EC005C81B1 /* XCTest.framework in Frameworks */,
+				FE859B4D178486EC005C81B1 /* CoreData.framework in Frameworks */,
+				FE859B4C178486EC005C81B1 /* UIKit.framework in Frameworks */,
+				FE859B4B178486EC005C81B1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FE859B1F178486EB005C81B1 = {
+			isa = PBXGroup;
+			children = (
+				FE859B33178486EB005C81B1 /* NASA TV */,
+				FE859B50178486EC005C81B1 /* NASA TVTests */,
+				FE859B2A178486EB005C81B1 /* Frameworks */,
+				FE859B29178486EB005C81B1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FE859B29178486EB005C81B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FE859B28178486EB005C81B1 /* NASA TV.app */,
+				FE859B48178486EC005C81B1 /* NASA TVTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FE859B2A178486EB005C81B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA8C25F7178CEC4B004C45F3 /* SystemConfiguration.framework */,
+				BA8C25F3178CEC3F004C45F3 /* Security.framework */,
+				BA8C25F1178CEC37004C45F3 /* MobileCoreServices.framework */,
+				BA8C25EF178CEC2F004C45F3 /* QuartzCore.framework */,
+				BA8C25ED178CEA45004C45F3 /* CFNetwork.framework */,
+				BA8C25EB178CEA33004C45F3 /* AudioToolbox.framework */,
+				BA8C25E9178CE970004C45F3 /* Parse.framework */,
+				FE6502BE1789F38B000E4505 /* MediaPlayer.framework */,
+				FE859B2B178486EB005C81B1 /* Foundation.framework */,
+				FE859B2D178486EB005C81B1 /* CoreGraphics.framework */,
+				FE859B2F178486EB005C81B1 /* UIKit.framework */,
+				FE859B31178486EB005C81B1 /* CoreData.framework */,
+				FE859B49178486EC005C81B1 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FE859B33178486EB005C81B1 /* NASA TV */ = {
+			isa = PBXGroup;
+			children = (
+				FE859B3C178486EB005C81B1 /* AppDelegate.h */,
+				FE859B3D178486EB005C81B1 /* AppDelegate.m */,
+				BA8C25FE178D1A72004C45F3 /* PhotoViewController.h */,
+				BA8C25FF178D1A72004C45F3 /* PhotoViewController.m */,
+				FE859BA31784C29F005C81B1 /* NewsViewController.h */,
+				FE859BA41784C29F005C81B1 /* NewsViewController.m */,
+				FE859BA61784C2BE005C81B1 /* VideoViewController.h */,
+				FE859BA71784C2BE005C81B1 /* VideoViewController.m */,
+				FE6502BB1789F31E000E4505 /* VideoDetailViewController.h */,
+				FE6502BC1789F31E000E4505 /* VideoDetailViewController.m */,
+				FEBC8B5017888F6300884EB3 /* GetNewsWebOperation.h */,
+				FEBC8B5117888F6300884EB3 /* GetNewsWebOperation.m */,
+				FE3BE79A1789E3E1003F96E3 /* GetVideosWebOperation.h */,
+				FE3BE79B1789E3E1003F96E3 /* GetVideosWebOperation.m */,
+				FE859BAF178517ED005C81B1 /* NewsCell.h */,
+				FE859BB0178517ED005C81B1 /* NewsCell.m */,
+				BA63EDE517933FED00FF0607 /* VideoCell.h */,
+				BA63EDE617933FED00FF0607 /* VideoCell.m */,
+				FE859B601784BFFE005C81B1 /* Main.storyboard */,
+				FE859B3F178486EB005C81B1 /* NASA_TV.xcdatamodeld */,
+				FE0DA9F017CE34C500384411 /* News.h */,
+				FE0DA9F117CE34C500384411 /* News.m */,
+				FE6502C3178A1470000E4505 /* Video.h */,
+				FE6502C4178A1470000E4505 /* Video.m */,
+				BA63EDD517933C3600FF0607 /* checkmark@1x.png */,
+				BA63EDD617933C3600FF0607 /* checkmark@2x.png */,
+				BA36D69F17934C2900A6D168 /* barBackground.png */,
+				BA63EDD717933C3600FF0607 /* logo@1x.png */,
+				BA63EDD817933C3600FF0607 /* logo@2x.png */,
+				BA63EDD917933C3600FF0607 /* news@1x.png */,
+				BA63EDDA17933C3600FF0607 /* news@2x.png */,
+				BA73B31B1798F10100604C15 /* play@1x.png */,
+				BA73B31C1798F10100604C15 /* play@2x.png */,
+				BA63EDDB17933C3600FF0607 /* video@1x.png */,
+				BA63EDDC17933C3600FF0607 /* video@2x.png */,
+				FE859B42178486EB005C81B1 /* Images.xcassets */,
+				FE859B34178486EB005C81B1 /* Supporting Files */,
+			);
+			path = "NASA TV";
+			sourceTree = "<group>";
+		};
+		FE859B34178486EB005C81B1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE859B35178486EB005C81B1 /* NASA TV-Info.plist */,
+				FE859B36178486EB005C81B1 /* InfoPlist.strings */,
+				FE859B39178486EB005C81B1 /* main.m */,
+				FE859B3B178486EB005C81B1 /* NASA TV-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FE859B50178486EC005C81B1 /* NASA TVTests */ = {
+			isa = PBXGroup;
+			children = (
+				FE859B56178486EC005C81B1 /* NASA_TVTests.m */,
+				FE859B51178486EC005C81B1 /* Supporting Files */,
+			);
+			path = "NASA TVTests";
+			sourceTree = "<group>";
+		};
+		FE859B51178486EC005C81B1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE859B52178486EC005C81B1 /* NASA TVTests-Info.plist */,
+				FE859B53178486EC005C81B1 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FE859B27178486EB005C81B1 /* NASA TV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE859B5A178486EC005C81B1 /* Build configuration list for PBXNativeTarget "NASA TV" */;
+			buildPhases = (
+				FE859B24178486EB005C81B1 /* Sources */,
+				FE859B25178486EB005C81B1 /* Frameworks */,
+				FE859B26178486EB005C81B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NASA TV";
+			productName = "NASA TV";
+			productReference = FE859B28178486EB005C81B1 /* NASA TV.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FE859B47178486EC005C81B1 /* NASA TVTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE859B5D178486EC005C81B1 /* Build configuration list for PBXNativeTarget "NASA TVTests" */;
+			buildPhases = (
+				FE859B44178486EC005C81B1 /* Sources */,
+				FE859B45178486EC005C81B1 /* Frameworks */,
+				FE859B46178486EC005C81B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FE859B4F178486EC005C81B1 /* PBXTargetDependency */,
+			);
+			name = "NASA TVTests";
+			productName = "NASA TVTests";
+			productReference = FE859B48178486EC005C81B1 /* NASA TVTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FE859B20178486EB005C81B1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Pietro Rea";
+				TargetAttributes = {
+					FE859B27178486EB005C81B1 = {
+						DevelopmentTeam = C8T7H79ZD2;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
+					};
+					FE859B47178486EC005C81B1 = {
+						TestTargetID = FE859B27178486EB005C81B1;
+					};
+				};
+			};
+			buildConfigurationList = FE859B23178486EB005C81B1 /* Build configuration list for PBXProject "NASA TV" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FE859B1F178486EB005C81B1;
+			productRefGroup = FE859B29178486EB005C81B1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FE859B27178486EB005C81B1 /* NASA TV */,
+				FE859B47178486EC005C81B1 /* NASA TVTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FE859B26178486EB005C81B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA73B31E1798F10100604C15 /* play@2x.png in Resources */,
+				FE859B611784BFFE005C81B1 /* Main.storyboard in Resources */,
+				BA63EDE417933C3600FF0607 /* video@2x.png in Resources */,
+				BA63EDDD17933C3600FF0607 /* checkmark@1x.png in Resources */,
+				BA63EDE217933C3600FF0607 /* news@2x.png in Resources */,
+				BA63EDE317933C3600FF0607 /* video@1x.png in Resources */,
+				FE859B38178486EB005C81B1 /* InfoPlist.strings in Resources */,
+				FE859B43178486EB005C81B1 /* Images.xcassets in Resources */,
+				BA63EDE117933C3600FF0607 /* news@1x.png in Resources */,
+				BA63EDE017933C3600FF0607 /* logo@2x.png in Resources */,
+				BA73B31D1798F10100604C15 /* play@1x.png in Resources */,
+				BA36D6A017934C2900A6D168 /* barBackground.png in Resources */,
+				BA63EDDF17933C3600FF0607 /* logo@1x.png in Resources */,
+				BA63EDDE17933C3600FF0607 /* checkmark@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE859B46178486EC005C81B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE859B55178486EC005C81B1 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FE859B24178486EB005C81B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE0DA9F217CE34C500384411 /* News.m in Sources */,
+				BA63EDE717933FED00FF0607 /* VideoCell.m in Sources */,
+				FE859BA81784C2BE005C81B1 /* VideoViewController.m in Sources */,
+				FE859B41178486EB005C81B1 /* NASA_TV.xcdatamodeld in Sources */,
+				FE859BB1178517ED005C81B1 /* NewsCell.m in Sources */,
+				FE859B3E178486EB005C81B1 /* AppDelegate.m in Sources */,
+				FE859B3A178486EB005C81B1 /* main.m in Sources */,
+				FEBC8B5217888F6300884EB3 /* GetNewsWebOperation.m in Sources */,
+				FE859BA51784C29F005C81B1 /* NewsViewController.m in Sources */,
+				FE6502C5178A1470000E4505 /* Video.m in Sources */,
+				BA8C2600178D1A72004C45F3 /* PhotoViewController.m in Sources */,
+				FE6502BD1789F31E000E4505 /* VideoDetailViewController.m in Sources */,
+				FE3BE79C1789E3E1003F96E3 /* GetVideosWebOperation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE859B44178486EC005C81B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE859B57178486EC005C81B1 /* NASA_TVTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FE859B4F178486EC005C81B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE859B27178486EB005C81B1 /* NASA TV */;
+			targetProxy = FE859B4E178486EC005C81B1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FE859B36178486EB005C81B1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE859B37178486EB005C81B1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FE859B53178486EC005C81B1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE859B54178486EC005C81B1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FE859B58178486EC005C81B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Pietro Rea (XQC5FZXNDU)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Pietro Rea (XQC5FZXNDU)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FE859B59178486EC005C81B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Pietro Rea (XQC5FZXNDU)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Pietro Rea (XQC5FZXNDU)";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FE859B5B178486EC005C81B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Pietro Rea (XQC5FZXNDU)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NASA TV/NASA TV-Prefix.pch";
+				INFOPLIST_FILE = "NASA TV/NASA TV-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FE859B5C178486EC005C81B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NASA TV/NASA TV-Prefix.pch";
+				INFOPLIST_FILE = "NASA TV/NASA TV-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		FE859B5E178486EC005C81B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NASA TV.app/NASA TV";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(SYSTEM_APPS_DIR)/Xcode5-DP2.app/Contents/Developer/Library/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NASA TV/NASA TV-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "NASA TVTests/NASA TVTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		FE859B5F178486EC005C81B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NASA TV.app/NASA TV";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(SYSTEM_APPS_DIR)/Xcode5-DP2.app/Contents/Developer/Library/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NASA TV/NASA TV-Prefix.pch";
+				INFOPLIST_FILE = "NASA TVTests/NASA TVTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FE859B23178486EB005C81B1 /* Build configuration list for PBXProject "NASA TV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE859B58178486EC005C81B1 /* Debug */,
+				FE859B59178486EC005C81B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE859B5A178486EC005C81B1 /* Build configuration list for PBXNativeTarget "NASA TV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE859B5B178486EC005C81B1 /* Debug */,
+				FE859B5C178486EC005C81B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE859B5D178486EC005C81B1 /* Build configuration list for PBXNativeTarget "NASA TVTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE859B5E178486EC005C81B1 /* Debug */,
+				FE859B5F178486EC005C81B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FE859B3F178486EB005C81B1 /* NASA_TV.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FE859B40178486EB005C81B1 /* NASA_TV.xcdatamodel */,
+			);
+			currentVersion = FE859B40178486EB005C81B1 /* NASA_TV.xcdatamodel */;
+			path = NASA_TV.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FE859B20178486EB005C81B1 /* Project object */;
+}
