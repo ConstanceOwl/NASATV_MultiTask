@@ -48,7 +48,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self populateData];
+    [self populateDataWithCompletionHandler:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -58,7 +58,7 @@
 
 #pragma mark - Data
 
-- (void)populateData {
+- (void)populateDataWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
     
     self.getNewsWebOperation = [[GetNewsWebOperation alloc] init];
     
@@ -83,18 +83,39 @@
             weakSelf.newsEntries = [appDelegate.managedObjectContext executeFetchRequest:fetchRequest error:nil];
             [weakSelf.tableView reloadData];
             [weakSelf.refreshControl endRefreshing];
+            
+            // 1
+            /*
+             *  Check if a completion handler was passed in. If there's no completion handler available it means that populateDataWithCompletionHandler: was called from within NewsViewController and you don't have to do anything with regards to background fetching.
+             */
+            if (completionHandler) {
+                // 2
+                /*
+                 *  hasNewEntries is the second parameter passed in from GetNewsWebOperation's successBlock. If you inspect GetNewsWebOperation.m, you'll see that parseNewsData: checks the incoming news items against the ones already stored in Core Data to set this flag.
+                 */
+                if (hasNewEntries) {
+                    completionHandler(UIBackgroundFetchResultNewData);
+                    // 3
+                    [UIApplication sharedApplication].applicationIconBadgeNumber++;
+                } else {
+                    completionHandler(UIBackgroundFetchResultNoData);
+                }
+            }
         });
     }];
     
     [self.getNewsWebOperation setFailureBlock:^{
         [weakSelf.refreshControl endRefreshing];
+        if (completionHandler) {
+            completionHandler(UIBackgroundFetchResultFailed);
+        }
     }];
     
     [self.getNewsWebOperation startAsynchronous];
 }
 
 - (void)refreshTableView:(id)sender {
-    [self populateData];
+    [self populateDataWithCompletionHandler:nil];
 }
 
 #pragma mark - UITableViewDelegate/DataSource

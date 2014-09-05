@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>10ACBD17-63D9-410D-96A5-06159A5C83C7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>NASA TV</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>68F684C8-FFB8-4F5F-9DCE-7260161BF8F4</key>
+		<string>https://github.com/perrychen901105/NASATV_MultiTask</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>NASA TV.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>68F684C8-FFB8-4F5F-9DCE-7260161BF8F4</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/perrychen901105/NASATV_MultiTask</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>68F684C8-FFB8-4F5F-9DCE-7260161BF8F4</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>68F684C8-FFB8-4F5F-9DCE-7260161BF8F4</string>
+			<key>IDESourceControlWCCName</key>
+			<string>NASATV_MultiTask</string>
+		</dict>
+	</array>
+</dict>
+</plist>

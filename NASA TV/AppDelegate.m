@@ -21,7 +21,7 @@
     // Override point for customization after application launch.
     
     NSUserDefaults* ud = [NSUserDefaults standardUserDefaults];
-    [ud setObject:@"http://192.168.1.123:44447"
+    [ud setObject:@"http://192.168.10.131:44447"
            forKey:@"baseURLString"];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -186,5 +186,29 @@
     
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
+
+/*
+ *  system calls this when it wakes up your application to perform a background fetch.
+ */
+- (void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
+{
+    UIViewController *rootVC = self.window.rootViewController;
+    UITabBarController *tbc = (UITabBarController *)rootVC;
+    
+    id selectedVC = tbc.selectedViewController;
+    
+    /*
+     * update UI if NewsViewController is the currently selected tab.
+     */
+    if ([selectedVC isMemberOfClass:[UINavigationController class]]) {
+        id topVC = [(UINavigationController *)selectedVC topViewController];
+        
+        if ([topVC isMemberOfClass:[NewsViewController class]]) {
+            [(NewsViewController *)topVC populateDataWithCompletionHandler:completionHandler];
+        }
+    }
+}
+
+
 
 @end
