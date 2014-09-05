@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "NewsViewController.h"
 #import "PhotoViewController.h"
+#import "VideoViewController.h"
 
 @implementation AppDelegate
 
@@ -21,7 +22,7 @@
     // Override point for customization after application launch.
     
     NSUserDefaults* ud = [NSUserDefaults standardUserDefaults];
-    [ud setObject:@"http://192.168.10.131:44447"
+    [ud setObject:@"http://192.168.1.102:44447"
            forKey:@"baseURLString"];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -205,6 +206,8 @@
         
         if ([topVC isMemberOfClass:[NewsViewController class]]) {
             [(NewsViewController *)topVC populateDataWithCompletionHandler:completionHandler];
+        } else if ([topVC isMemberOfClass:[VideoViewController class]]) {
+            [(VideoViewController *)topVC populateDataWithCompletionHandler:completionHandler];
         }
     }
 }

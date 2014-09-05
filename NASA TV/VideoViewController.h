@@ -10,4 +10,6 @@
 
 @interface VideoViewController : UIViewController
 
+- (void)populateDataWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler;
+
 @end

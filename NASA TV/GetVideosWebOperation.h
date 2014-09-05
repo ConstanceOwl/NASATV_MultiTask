@@ -10,7 +10,7 @@
 
 @interface GetVideosWebOperation : NSObject
 
-@property (copy, nonatomic) void(^successBlock)(NSArray* result);
+@property (copy, nonatomic) void(^successBlock)(NSArray* result, BOOL hasNewEntries);
 @property (copy, nonatomic) void(^failureBlock)(void);
 
 - (void)startAsynchronous;

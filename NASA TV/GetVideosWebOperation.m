@@ -89,6 +89,7 @@
         NSArray* storedVideosArray = [weakSelf.managedObjectContext executeFetchRequest:fetchRequest error:&error];
         if (error) NSLog(@"Fetching error");
         
+        BOOL hasNewEntries = NO;
         
         for (NSDictionary* videoDict  in jsonArray) {
             
@@ -98,6 +99,7 @@
             if (!video) {
                 /* News item is new, create it in Core Data */
                 video = [[Video alloc] initWithEntity:entity insertIntoManagedObjectContext:self.managedObjectContext];
+                hasNewEntries = YES;
             }
             
             [video setVideoID:videoDict[@"videoID"]];
@@ -113,7 +115,7 @@
                 NSLog(@"Managed object context could not save %@, %@", error, [error userInfo]);
             }
             else {
-                if (weakSelf.successBlock) weakSelf.successBlock([videosArray copy]);
+                if (weakSelf.successBlock) weakSelf.successBlock([videosArray copy], hasNewEntries);
             }
         }
     }];
