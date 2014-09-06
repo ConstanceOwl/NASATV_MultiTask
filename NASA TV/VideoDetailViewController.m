@@ -10,10 +10,13 @@
 #import "VideoDetailViewController.h"
 #import <MediaPlayer/MPMoviePlayerController.h>
 
-@interface VideoDetailViewController()
+@interface VideoDetailViewController() <NSURLSessionDelegate, NSURLSessionTaskDelegate, NSURLSessionDownloadDelegate>
 
 @property (strong, nonatomic) NSURL* videoURL;
 @property (strong, nonatomic) MPMoviePlayerController* moviePlayerViewController;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *downloadButton;
+@property (weak, nonatomic) IBOutlet UIProgressView *progressView;
+- (IBAction)downloadButtonTapped:(id)sender;
 
 @end
 
@@ -71,4 +74,6 @@
     }
 }
 
+- (IBAction)downloadButtonTapped:(id)sender {
+}
 @end
