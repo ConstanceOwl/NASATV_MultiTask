@@ -10,6 +10,7 @@
 #import "NewsViewController.h"
 #import "PhotoViewController.h"
 #import "VideoViewController.h"
+#import <Parse/Parse.h>
 
 @implementation AppDelegate
 
@@ -22,7 +23,7 @@
     // Override point for customization after application launch.
     
     NSUserDefaults* ud = [NSUserDefaults standardUserDefaults];
-    [ud setObject:@"http://192.168.1.102:44447"
+    [ud setObject:@"http://192.168.10.131:44447"
            forKey:@"baseURLString"];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -42,6 +43,12 @@
     
     // Change status bar color to white
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+    [Parse setApplicationId:@"iuKwKjynsNokRUHiWCMDqLZO1a3WpSLhx7Jqj6c2" clientKey:@"6cwPCdgyTreOqjaze8zZ9ryCGWtUgxJTzIp14EZT"];
+    
+    [application registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
+                                                     UIRemoteNotificationTypeAlert |
+                                                     UIRemoteNotificationTypeSound)];
     
     return YES;
 }
@@ -219,6 +226,41 @@
                                @"sessionIdentifier": identifier};
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"BackgroundTransferNotification" object:nil userInfo:userInfo];
+}
+
+#pragma mark - Push notification
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceTokenFromData:deviceToken];
+    [currentInstallation saveInBackground];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+    [PFPush handlePush:userInfo];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
+{
+    // 1
+    /*
+     *  Save the completion handler in the public block property silentRemoteNotificationCompletionHandler. Instead of handing the completion handler to PhotoViewController, PhotoViewController will look for it here when it's done downloading NASA's photo of the day.
+     */
+    self.slientRemoteNotificationCompletionHandler = completionHandler;
+    
+    // 2
+    
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    PhotoViewController *photoViewController = [sb instantiateViewControllerWithIdentifier:@"PhotoViewController"];
+    
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:photoViewController];
+    
+    UITabBarController *rootViewController = (UITabBarController *)self.window.rootViewController;
+    
+    // 3
+    [rootViewController presentViewController:navController animated:YES completion:nil];
 }
 
 @end

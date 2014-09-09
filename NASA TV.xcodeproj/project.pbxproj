@@ -27,6 +27,10 @@
 		BA8C25F4178CEC3F004C45F3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA8C25F3178CEC3F004C45F3 /* Security.framework */; };
 		BA8C25F8178CEC4B004C45F3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA8C25F7178CEC4B004C45F3 /* SystemConfiguration.framework */; };
 		BA8C2600178D1A72004C45F3 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA8C25FF178D1A72004C45F3 /* PhotoViewController.m */; };
+		C24A3B0219BED5BE00BABB07 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C24A3B0119BED5BE00BABB07 /* Parse.framework */; };
+		C24A3B0419BED5F100BABB07 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C24A3B0319BED5F100BABB07 /* CoreLocation.framework */; };
+		C24A3B0619BED5FA00BABB07 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C24A3B0519BED5FA00BABB07 /* libz.dylib */; };
+		C24A3B0819BED61000BABB07 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C24A3B0719BED61000BABB07 /* StoreKit.framework */; };
 		FE0DA9F217CE34C500384411 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0DA9F117CE34C500384411 /* News.m */; };
 		FE3BE79C1789E3E1003F96E3 /* GetVideosWebOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3BE79B1789E3E1003F96E3 /* GetVideosWebOperation.m */; };
 		FE6502BD1789F31E000E4505 /* VideoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6502BC1789F31E000E4505 /* VideoDetailViewController.m */; };
@@ -87,6 +91,10 @@
 		BA8C25F7178CEC4B004C45F3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		BA8C25FE178D1A72004C45F3 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
 		BA8C25FF178D1A72004C45F3 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
+		C24A3B0119BED5BE00BABB07 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		C24A3B0319BED5F100BABB07 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C24A3B0519BED5FA00BABB07 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		C24A3B0719BED61000BABB07 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		FE0DA9F017CE34C500384411 /* News.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = News.h; sourceTree = "<group>"; };
 		FE0DA9F117CE34C500384411 /* News.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = News.m; sourceTree = "<group>"; };
 		FE3BE79A1789E3E1003F96E3 /* GetVideosWebOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetVideosWebOperation.h; sourceTree = "<group>"; };
@@ -130,12 +138,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C24A3B0819BED61000BABB07 /* StoreKit.framework in Frameworks */,
+				C24A3B0619BED5FA00BABB07 /* libz.dylib in Frameworks */,
+				C24A3B0419BED5F100BABB07 /* CoreLocation.framework in Frameworks */,
 				BA8C25F8178CEC4B004C45F3 /* SystemConfiguration.framework in Frameworks */,
 				BA8C25F4178CEC3F004C45F3 /* Security.framework in Frameworks */,
 				BA8C25F2178CEC37004C45F3 /* MobileCoreServices.framework in Frameworks */,
 				BA8C25F0178CEC2F004C45F3 /* QuartzCore.framework in Frameworks */,
 				BA8C25EE178CEA45004C45F3 /* CFNetwork.framework in Frameworks */,
 				BA8C25EC178CEA33004C45F3 /* AudioToolbox.framework in Frameworks */,
+				C24A3B0219BED5BE00BABB07 /* Parse.framework in Frameworks */,
 				FE6502BF1789F38B000E4505 /* MediaPlayer.framework in Frameworks */,
 				FE859B2E178486EB005C81B1 /* CoreGraphics.framework in Frameworks */,
 				FE859B32178486EB005C81B1 /* CoreData.framework in Frameworks */,
@@ -181,6 +193,9 @@
 		FE859B2A178486EB005C81B1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C24A3B0719BED61000BABB07 /* StoreKit.framework */,
+				C24A3B0519BED5FA00BABB07 /* libz.dylib */,
+				C24A3B0319BED5F100BABB07 /* CoreLocation.framework */,
 				BA8C25F7178CEC4B004C45F3 /* SystemConfiguration.framework */,
 				BA8C25F3178CEC3F004C45F3 /* Security.framework */,
 				BA8C25F1178CEC37004C45F3 /* MobileCoreServices.framework */,
@@ -201,6 +216,7 @@
 		FE859B33178486EB005C81B1 /* NASA TV */ = {
 			isa = PBXGroup;
 			children = (
+				C24A3B0119BED5BE00BABB07 /* Parse.framework */,
 				FE859B3C178486EB005C81B1 /* AppDelegate.h */,
 				FE859B3D178486EB005C81B1 /* AppDelegate.m */,
 				BA8C25FE178D1A72004C45F3 /* PhotoViewController.h */,
@@ -459,8 +475,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Pietro Rea (XQC5FZXNDU)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Pietro Rea (XQC5FZXNDU)";
+				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: com.perry.nasatv";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development IOS Push Services: com.perry.nasatv";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -497,8 +513,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Pietro Rea (XQC5FZXNDU)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Pietro Rea (XQC5FZXNDU)";
+				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: com.perry.nasatv";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development IOS Push Services: com.perry.nasatv";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -523,13 +539,15 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
+					"$(PROJECT_DIR)/NASA",
+					TV,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NASA TV/NASA TV-Prefix.pch";
 				INFOPLIST_FILE = "NASA TV/NASA TV-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a1dc1469-7139-45b5-b89c-6fee750fae88";
+				PROVISIONING_PROFILE = "4c22388e-61aa-442e-a409-8c85419961b7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -543,13 +561,15 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
+					"$(PROJECT_DIR)/NASA",
+					TV,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NASA TV/NASA TV-Prefix.pch";
 				INFOPLIST_FILE = "NASA TV/NASA TV-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a1dc1469-7139-45b5-b89c-6fee750fae88";
+				PROVISIONING_PROFILE = "4c22388e-61aa-442e-a409-8c85419961b7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

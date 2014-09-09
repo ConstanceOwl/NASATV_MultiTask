@@ -15,6 +15,8 @@
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
+@property (copy, nonatomic) void(^slientRemoteNotificationCompletionHandler)(UIBackgroundFetchResult);
+
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 
